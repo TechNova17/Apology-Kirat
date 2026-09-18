@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry 🤍</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    background: linear-gradient(135deg, #fff1f5, #f8f0ff);
+    color: #4b3b43;
+    overflow: hidden;
+  }
+  .hearts span {
+    position: fixed;
+    font-size: 22px;
+    opacity: .5;
+    animation: float 7s linear infinite;
+  }
+  .hearts span:nth-child(1){left:8%;animation-delay:0s}
+  .hearts span:nth-child(2){left:24%;animation-delay:2s}
+  .hearts span:nth-child(3){left:72%;animation-delay:1s}
+  .hearts span:nth-child(4){left:90%;animation-delay:3s}
+  @keyframes float {
+    from { transform: translateY(110vh) rotate(0); }
+    to { transform: translateY(-15vh) rotate(25deg); }
+  }
+  .card {
+    width: min(90%, 560px);
+    padding: 34px 28px;
+    background: rgba(255,255,255,.88);
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 18px 60px rgba(120,80,100,.15);
+    position: relative;
+    z-index: 2;
+  }
+  h1 { margin: 0 0 8px; font-size: 34px; }
+  .subtitle { margin-bottom: 24px; opacity: .75; }
+  button {
+    border: 0;
+    padding: 13px 26px;
+    border-radius: 999px;
+    background: #8f6477;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(143,100,119,.25);
+  }
+  button:active { transform: scale(.97); }
+  #message {
+    display: none;
+    text-align: left;
+    margin-top: 26px;
+    line-height: 1.75;
+    font-size: 16px;
+    animation: appear .8s ease;
+  }
+  .sign { text-align:center; margin-top:22px; font-size:18px; }
+  @keyframes appear {
+    from { opacity:0; transform: translateY(10px); }
+    to { opacity:1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+<div class="hearts">
+  <span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+</div>
+
+<div class="card">
+  <h1>Hey… 🥺</h1>
+  <div class="subtitle">I have something I really want to say.</div>
+  <button onclick="showMessage()">Open this 💌</button>
+
+  <div id="message">
+    <p><b>Heyy pookie 🥺❤️ I’m genuinely sorry for [what I said</b></p>
+    <p>I realize that it probably made you feel Upset.</p>
+    <p>I shouldn’t have mentioned that , and I take responsibility for that , and I take responsibility for that.</p>
+    <p>I never wanted to make you feel that way, especially because you’re someone I genuinely care about. 🫂 I'll try my best to make sure this doesn't happen again.</p>
+    <p> I’m not trying to make excuses—I just really want you to know that I’m sorry and I’ll be more careful next time. Please don’t let my stupid mistake come between us 🥹❤️</p>
+    <p>Please, please, please, please forgive me for what I did. I'm still a little emotionally exhausted right now.</p>
+    <p class="sign"><b>I'm really sorry. 🤍</b></p>
+  </div>
+</div>
+
+<script>
+function showMessage() {
+  document.querySelector("button").style.display = "none";
+  document.querySelector("#message").style.display = "block";
+}
+</script>
+</body>
+</html>
